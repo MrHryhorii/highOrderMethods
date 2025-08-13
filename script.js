@@ -71,3 +71,10 @@ const clothings = products.filter(item => item.category === 'clothing').map(item
 log(`The names of all products in the "clothing" category`);
 log(clothings);
 separator();
+
+/* Task - 4 */
+log("Task - 4");
+const check1000 = products.some(item => item.price > 1000);
+log("Are there products that cost more than 1000? - " + check1000);
+separator();
+
