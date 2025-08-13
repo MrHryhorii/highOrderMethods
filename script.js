@@ -64,3 +64,10 @@ const nameList = products.map(item => item.name);
 log("A list of the names of all the products");
 log(nameList);
 separator();
+
+/* Task - 3 */
+log("Task - 3");
+const clothings = products.filter(item => item.category === 'clothing').map(item => item.name);
+log(`The names of all products in the "clothing" category`);
+log(clothings);
+separator();
