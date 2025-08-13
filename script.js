@@ -78,3 +78,7 @@ const check1000 = products.some(item => item.price > 1000);
 log("Are there products that cost more than 1000? - " + check1000);
 separator();
 
+/* Task - 5 */
+log("Task - 5");
+const cost = products.reduce((acc, item) => acc + item.price, 0);
+log("The entire warehouse is worth before sales: " + cost);
