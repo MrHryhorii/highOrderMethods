@@ -52,6 +52,7 @@ const separator = () => {
 */
 
 /* Task - 1 */
+// Filter electronics cheaper than 200 gold coins
 log("Task - 1");
 const less200 = products.filter(item => item.price < 200 && item.category == "electronics");
 log("Electronics that cost less than 200");
@@ -59,6 +60,7 @@ log(less200);
 separator();
 
 /* Task - 2 */
+// Get the list of all product names
 log("Task - 2");
 const nameList = products.map(item => item.name);
 log("A list of the names of all the products");
@@ -66,6 +68,7 @@ log(nameList);
 separator();
 
 /* Task - 3 */
+// Get names of all clothing products
 log("Task - 3");
 const clothings = products.filter(item => item.category === 'clothing').map(item => item.name);
 log(`The names of all products in the "clothing" category`);
@@ -73,12 +76,14 @@ log(clothings);
 separator();
 
 /* Task - 4 */
+// Check if any product costs more than 1000 gold coins
 log("Task - 4");
 const check1000 = products.some(item => item.price > 1000);
 log("Are there products that cost more than 1000? - " + check1000);
 separator();
 
 /* Task - 5 */
+// Calculate total value of all products in stock
 log("Task - 5");
 const cost = products.reduce((acc, item) => acc + item.price, 0);
 log("The entire warehouse is worth before sales: " + cost);
