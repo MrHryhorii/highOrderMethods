@@ -57,3 +57,10 @@ const less200 = products.filter(item => item.price < 200 && item.category == "el
 log("Electronics that cost less than 200");
 log(less200);
 separator();
+
+/* Task - 2 */
+log("Task - 2");
+const nameList = products.map(item => item.name);
+log("A list of the names of all the products");
+log(nameList);
+separator();
