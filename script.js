@@ -8,6 +8,36 @@ const products = [
     { name: "Sneakers", price: 300, category: "clothing" }
   ];
 
+
+/* Extra render functions */
+const output = document.getElementById("output");
+
+// function for double log
+const log = (message) => {
+    console.log(message);
+
+    const container = document.createElement("div");
+
+    // pretty-print if it's an object/array
+    if (typeof message === "object") {
+        const pre = document.createElement("pre");
+        pre.textContent = JSON.stringify(message, null, 2);
+        container.appendChild(pre);
+    } else {
+        const p = document.createElement("p");
+        p.textContent = message;
+        container.appendChild(p);
+    }
+
+    output.appendChild(container);
+};
+
+// create "hr" tag in output div
+const separator = () => {
+    output.appendChild(document.createElement("hr"));
+};
+
+/* Tasks */
 /*
     1.Find all products in the "electronics" category that cost less than 200 – 
         these should receive an extra discount to be sold out quickly.
@@ -18,3 +48,5 @@ const products = [
         and Alva is considering providing special offers on them.
     5.Rain out how much the entire warehouse is worth before sales start - So Alva knows how much she can earn.
 */
+
+/* Task - 1 */
